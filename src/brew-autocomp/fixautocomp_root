@@ -1,0 +1,10 @@
+cd /usr/local/share/zsh
+chown root .
+cd site-functions
+chown root .
+chown root $(readlink -n _brew)
+chown root $(readlink -n _brew_cask)
+chown root $(readlink -n _gh)
+
+# chmod u-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
+

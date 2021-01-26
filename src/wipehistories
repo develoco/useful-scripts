@@ -1,0 +1,3 @@
+#!/bin/zsh
+
+rm ~/.bash_history ~/.zsh_history ~/.python_history ~/.sqlite_history

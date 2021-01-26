@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+# Check if repo is new
+COMMIT_EXISTS=$(git rev-list --all --count)
+
+if [ $COMMIT_EXISTS -eq 0 ]
+then
+  # Use last sunday at midnight as date
+  GIT_COMMITTER_DATE=$(date -u -v -Sun "+%F 00:00:00 +0000")
+else
+  # Use the last commit date plus one second
+  # Last commit
+  GITDATE=$(git log -1 --pretty=format:%ci)
+  # Add one second
+  GIT_COMMITTER_DATE=$(date -u -j -v+1S -f "%F %T %z" "$GITDATE" "+%F %T %z")
+fi
+
+export GIT_COMMITTER_DATE
+git commit --date=\"$GIT_COMMITTER_DATE\" "$@"
+git log -1 --pretty=format:%ci

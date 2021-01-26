@@ -1,0 +1,1 @@
+su admin -c "sudo $(dirname $0)/fixautocomp_root"

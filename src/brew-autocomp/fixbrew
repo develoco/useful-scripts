@@ -1,0 +1,1 @@
+su admin -c "sudo $0_root"
