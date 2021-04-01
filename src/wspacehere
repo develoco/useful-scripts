@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+mkdir project.xcworkspace
+cd project.xcworkspace
+
+cat > contents.xcworkspacedata << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:">
+   </FileRef>
+</Workspace>
+EOF
+
+mkdir xcshareddata
+cd xcshareddata
+
+cat > IDEWorkspaceChecks.plist << EOF
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
+</dict>
+</plist>
+EOF
+
+cd ../../
+xed .

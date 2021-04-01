@@ -1,4 +1,4 @@
-FILES = src/brew-autocomp/* src/commit1s src/rmdsstore src/srcbackup src/wipehistories
+FILES = src/brew-autocomp/* src/commit1s src/rmdsstore src/srcbackup src/wipehistories src/wspacehere
 DESTDIR = $$HOME/Developer/bin
 
 install:
