@@ -3,8 +3,9 @@ chown root .
 cd site-functions
 chown root .
 chown root $(readlink -n _brew)
-chown root $(readlink -n _brew_cask)
 chown root $(readlink -n _gh)
+chown root $(readlink -n _docker)
+chown root $(readlink -n _docker-machine)
 
 # chmod u-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
 

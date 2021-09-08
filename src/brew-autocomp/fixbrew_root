@@ -5,8 +5,9 @@ if type brew &>/dev/null; then
   cd site-functions
   chown admin .
   chown admin $(readlink -n _brew)
-  chown admin $(readlink -n _brew_cask)
   chown admin $(readlink -n _gh)
+  chown admin $(readlink -n _docker)
+  chown admin $(readlink -n _docker-machine)
 fi
 
 # chmod u-w /usr/local/share/zsh /usr/local/share/zsh/site-functions
