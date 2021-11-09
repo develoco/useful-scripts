@@ -4,4 +4,4 @@ Use:
 
     make install
 
-To deploy into `~/Developer/bin`.
+To deploy into `~/.bin`.
