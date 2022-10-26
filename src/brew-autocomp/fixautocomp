@@ -1,1 +1,3 @@
+# Only needed when current macOS user is not an Administrator
+
 su admin -c "sudo $(dirname $0)/fixautocomp_root"
